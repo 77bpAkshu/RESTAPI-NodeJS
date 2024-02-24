@@ -1,0 +1,9 @@
+{
+    "env": {
+        "MONGO_USER": "akshubp77",
+        "MONGO_PASSWORD": "G5vJWObZEl4L9MWo",
+        "MONGO_DEFAULT_DATABASE": "bookmate"
+
+
+    }
+}

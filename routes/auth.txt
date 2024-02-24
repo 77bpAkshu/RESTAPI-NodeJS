@@ -1,0 +1,67 @@
+const express = require('express');
+const { body } = require('express-validator');
+const router = express.Router();
+const User = require('../Models/UserModel');
+const AuthController = require('../controllers/AuthController');
+
+//router.post('/user-login', AuthController.getCustomers);
+// router.post('/user-signup', [
+//     body('name')
+//         .trim()
+//         .isLength({ min: 5 })
+//         .withMessage('Name should be at least 5 characters long'),
+
+//     body('username')
+//         .trim()
+//         .isLength({ min: 5 })
+//         .withMessage('Username should be at least 5 characters long')
+//         .custom((value, { req }) => {
+//             return User.findOne({ username: value})
+//                        .then(userData => {
+//                             if(userData) {
+//                                 return Promise.reject('Username already exists!');
+//                             }
+//                        });
+//         }),
+
+//     body('mobile')
+//         .trim()
+//         .isLength({ min: 10 })
+//         .withMessage('Mobile number should be at least 10 characters long')
+//         .custom((value, { req }) => {
+//             return User.findOne({ mobile: value})
+//                        .then(userData => {
+//                             if(userData) {
+//                                 return Promise.reject('Mobile Number already exists!');
+//                             }
+//                        });
+//         }),
+
+//     body('email')
+//         .trim()
+//         .isEmail()
+//         .withMessage('Invalid email address')
+//         .custom((value, { req }) => {
+//             return User.findOne({email: value})
+//                        .then(userData => {
+//                             if(userData) {
+//                                 return Promise.reject('E-Mail already exists!');
+//                             }
+//                        });
+//         })
+//         .normalizeEmail(),
+
+//     body('password')
+//         .trim()
+//         .isLength({min: 8})
+//         .notEmpty()
+//         .withMessage('Password cannot be empty'),
+
+//     body('address')
+//         .trim()
+//         .notEmpty()
+//         .withMessage('Address cannot be empty'),
+// ], AuthController.postCreateAccount);
+
+
+module.exports = router;
